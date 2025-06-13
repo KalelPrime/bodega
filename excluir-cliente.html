@@ -57,7 +57,24 @@
     <strong>Pronto</strong>
     Cliente excluido com sucesso!
 </div>
-
+<footer class="rodape">
+    <div id="dataHora"></div>
+  </footer>
+  
+  <script>
+    function atualizarDataHora() {
+      const dataHora = new Date();
+      const dataHoraElement = document.getElementById('dataHora');
+  
+      const dataFormatada = dataHora.toLocaleDateString();
+      const horaFormatada = dataHora.toLocaleTimeString();
+  
+      dataHoraElement.textContent = dataFormatada + " " + horaFormatada;
+    }
+  
+    atualizarDataHora();
+    setInterval(atualizarDataHora, 1000);
+  </script>
 
 
  
